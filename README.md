@@ -19,6 +19,22 @@ python -m pip install -r requirements.txt
 
 The local interpreter can also be invoked directly as `/home/iyanshi/anaconda3/envs/qisk/bin/python`. Python 3.10 was used for the small unit checks. No environment changes are required to use this project.
 
+## Choose which qubit to remove and display PPT eigenvalues
+
+Run the standalone interactive demonstration:
+
+```bash
+python qubit_loss_ppt/check_ppt.py
+```
+
+Choose GHZ, W, or both and removal position 1 (first), 2 (second), or 3
+(third). It displays the PPT eigenvalues, whether a negative eigenvalue is
+present, and whether the remaining pair is entangled. For no prompts, use
+`python qubit_loss_ppt/check_ppt.py --state both --remove 2`.
+See [the standalone script instructions](qubit_loss_ppt/README.md) for the
+calculation, expected results, and source functions. Only small matrices are
+evaluated; no dataset generation or model training is involved.
+
 ## Small unit checks
 
 The following command checks physics and split logic without generating a dataset, training a classifier, or executing a quantum feature circuit:
